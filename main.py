@@ -20,3 +20,5 @@ app = webapp2.WSGIApplication([('/', StaticPage),
                               debug=True)
 
 # todo Error default html
+# todo Readme.md
+# todo license.md
