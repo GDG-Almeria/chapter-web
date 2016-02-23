@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Error 404 | GDG Almería</title>
+{% endblock %}
+
+
+{% block content %}
+hola hoal hola
+{% endblock %}
