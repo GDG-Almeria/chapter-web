@@ -16,6 +16,8 @@ from scripts.handlers import *
 
 # -- App --
 app = webapp2.WSGIApplication([('/', StaticPage),
+                               ('/eventos', EventsPage),
+                               ('/eventos/(.*)', EventPage),
                                ('/webmap', Webmap)],
                               debug=True)
 

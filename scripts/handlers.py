@@ -46,6 +46,22 @@ class StaticPage(MainHandler):
 		self.render(template)
 
 
+class EventsPage(MainHandler):
+	def get(self):
+		self.render('events.html')
+
+
+class EventPage(MainHandler):
+	def get(self, event_url):
+		if event_url == 'i-women-techmakers-almeria':
+			self.render('event.html')
+
+		else:
+			self.error(404)
+
+			self.render('error-404.html')
+
+
 class Webmap(MainHandler):
 	def get(self):
 		webmap = []     # todo
