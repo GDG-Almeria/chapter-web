@@ -18,9 +18,6 @@ from scripts.handlers import *
 app = webapp2.WSGIApplication([('/', StaticPage),
                                ('/eventos', EventsPage),
                                ('/eventos/(.*)', EventPage),
-                               ('/webmap', Webmap)],
+                               ('/webmap', Webmap),
+                               ('/.*', Error404)],
                               debug=True)
-
-# todo Error default html
-# todo Readme.md
-# todo license.md

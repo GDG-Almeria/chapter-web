@@ -53,7 +53,7 @@ class EventsPage(MainHandler):
 
 class EventPage(MainHandler):
 	def get(self, event_url):
-		if event_url == 'i-women-techmakers-almeria':
+		if event_url:
 			self.render('event.html')
 
 		else:
