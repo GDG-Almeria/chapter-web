@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 
 # Project: "GDG Almería"
-# Script: handlers.py - Web handlers
+# Script: handlers.py - Page handlers
 # App identifier: gdg-almeria
-# URL: www.---.com
+# URL: gdg-almeria.appspot.com
 # Author: Marcos Manuel Ortega - Indavelopers
-# Version: v1.0 - 02/2016
+# Version: v1-0 - 05/2016
 
 
 # -- Imports --
 import os
 import webapp2
 import jinja2
+
+from google.appengine.api import users
 
 
 # Initialize Jinja2 environment
@@ -62,11 +64,51 @@ class EventPage(MainHandler):
 			self.render('error-404.html')
 
 
+class AdminHandler(MainHandler):
+	@staticmethod
+	def get_logout_url():
+		user = users.get_current_user()
+
+		if user:
+			return users.create_logout_url('/')
+
+		else:
+			return None
+
+	def render(self, template, params=None):
+		if not params:
+			params = {}
+
+		params['logout_url'] = self.get_logout_url()
+
+		super(AdminHandler, self).render(self, template, params)
+
+
+class AdminPanel(AdminHandler):
+	def get(self):
+		self.render('admin-home.html')
+
+
+class AdminEventos(AdminHandler):
+	def get(self):
+		self.render('admin-eventos.html')
+
+
+class AdminOrganizadores(AdminHandler):
+	def get(self):
+		self.render('admin-organizadores.html')
+
+
+class AdminBlog(AdminHandler):
+	def get(self):
+		self.render('admin-blog.html')
+
+
 class Webmap(MainHandler):
 	def get(self):
-		webmap = []     # todo
+		pages = []
 
-		webmap = '<br>'.join(webmap)
+		webmap = '<br>'.join(pages)
 
 		self.response.out.write(webmap)
 

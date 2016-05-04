@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta name="description" content="GDG Almería">
+<meta name="keywords" content="gdg almería">
+
+<title>Panel de administración | GDG Almería</title>
+{% endblock %}
+
+
+{% block content %}
+<h2>Panel de administración</h2>
+
+<a href="{{logout_url}}">Logout</a>
+
+<ul>
+	<li><a href="/admin/eventos">Eventos</a></li>
+	<li><a href="/admin/organizadores">Organizadores</a></li>
+	<li><a href="/admin/blog">Blog</a></li>
+</ul>
+{% endblock %}

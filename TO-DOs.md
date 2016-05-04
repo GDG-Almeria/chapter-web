@@ -1,3 +1,33 @@
 #TO-DOs
 
-- Archivo error-default.html.
+- Panel de administración:
+  - Gestionar eventos.
+  - Gestionar organizadores.
+  - Gestionar blog
+- Página error 404.
+- Eventos:
+  - Página eventos.
+    - Enlace a Google Calendar.
+  - Página evento.
+  - Añadir/editar/eliminar evento.
+- Organizadores:
+  - Página bio.
+  - Enlace a G+.
+  - Añadir/editar/eliminar organizador.
+- Logotipos.
+- Tipografía.
+- Widget con feed de Twitter.
+- Enlace a seguir Twitter y comunidad de G+.
+- Enlaces a RRSS:
+  - Twitter.
+  - G+.
+  - Github.
+  - Facebook (crear página de Facebook).
+- Blog:
+  - Página blog.
+  - Paginación.
+  - Crear/editar/eliminar entrada.
+- Archivo error-default.html según HTML base.
+- Google Site Verification.
+- Webmap.
+- Bug favicon.  
